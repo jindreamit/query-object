@@ -1,0 +1,47 @@
+{
+  "type": "UpdateArray",
+  "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.rewardList",
+  "filter": {
+    "operator": "OR",
+    "value": [
+      {
+        "operator": "AND",
+        "value": [
+          {
+            "operator": "EQ",
+            "key": "instanceId",
+            "value": 1
+          },
+          {
+            "operator": "EQ",
+            "key": "status",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "operator": "AND",
+        "value": [
+          {
+            "operator": "EQ",
+            "key": "instanceId",
+            "value": 3
+          },
+          {
+            "operator": "EQ",
+            "key": "status",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  "update": [
+    {
+      "type": "expr",
+      "operator": "SET",
+      "key": "status",
+      "value": 0
+    }
+  ]
+}

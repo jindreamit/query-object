@@ -1,0 +1,3541 @@
+{
+  "_id": {
+    "$numberLong": "137438961681"
+  },
+  "lastUpdateTime__": {
+    "$numberLong": "1748250723914"
+  },
+  "maxRewardInstanceId": 74,
+  "rewardInstanceIdMap": {},
+  "taskMap": {
+    "SEVEN_DAYS_LOGIN:1:1": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 1,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "1747626297048"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 1,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "SEVEN_DAYS_LOGIN:1:1",
+      "type": 2
+    },
+    "SEVEN_DAYS_LOGIN:1:2": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 2,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747745268156"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 2,
+          "status": 1
+        }
+      ],
+      "targetValue": 2,
+      "taskId": "SEVEN_DAYS_LOGIN:1:2",
+      "type": 2
+    },
+    "SEVEN_DAYS_LOGIN:1:3": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 3,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747796255908"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 3,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 3,
+          "status": 1
+        }
+      ],
+      "targetValue": 3,
+      "taskId": "SEVEN_DAYS_LOGIN:1:3",
+      "type": 2
+    },
+    "SEVEN_DAYS_LOGIN:1:4": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 4,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 3,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 4,
+          "status": 0
+        }
+      ],
+      "targetValue": 4,
+      "taskId": "SEVEN_DAYS_LOGIN:1:4",
+      "type": 2
+    },
+    "SEVEN_DAYS_LOGIN:1:5": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 5,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 3,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 5,
+          "status": 0
+        }
+      ],
+      "targetValue": 5,
+      "taskId": "SEVEN_DAYS_LOGIN:1:5",
+      "type": 2
+    },
+    "SEVEN_DAYS_LOGIN:1:6": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 6,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 3,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 6,
+          "status": 0
+        }
+      ],
+      "targetValue": 6,
+      "taskId": "SEVEN_DAYS_LOGIN:1:6",
+      "type": 2
+    },
+    "SEVEN_DAYS_LOGIN:1:7": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 7,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "SEVEN_DAYS_LOGIN",
+      "progress": 3,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 7,
+          "status": 0
+        }
+      ],
+      "targetValue": 7,
+      "taskId": "SEVEN_DAYS_LOGIN:1:7",
+      "type": 2
+    },
+    "PASS_SEASON:1:1": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 1,
+      "extraParams": [
+        1
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:1",
+      "type": 3
+    },
+    "PASS_SEASON:1:10": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 10,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:10",
+      "type": 3
+    },
+    "PASS_SEASON:1:11": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 11,
+      "extraParams": [
+        11
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:11",
+      "type": 3
+    },
+    "PASS_SEASON:1:12": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 12,
+      "extraParams": [
+        12
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:12",
+      "type": 3
+    },
+    "PASS_SEASON:1:12010101": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010101,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747920130512"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010101",
+      "type": 0
+    },
+    "PASS_SEASON:1:12010202": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010202,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010202",
+      "type": 0
+    },
+    "PASS_SEASON:1:12010404": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010404,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010404",
+      "type": 0
+    },
+    "PASS_SEASON:1:12010606": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010606,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010606",
+      "type": 0
+    },
+    "PASS_SEASON:1:12010707": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010707,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747748784361"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010707",
+      "type": 0
+    },
+    "PASS_SEASON:1:12010808": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010808,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010808",
+      "type": 0
+    },
+    "PASS_SEASON:1:12010909": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12010909,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12010909",
+      "type": 0
+    },
+    "PASS_SEASON:1:12011010": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12011010,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12011010",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020101": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020101,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020101",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020202": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020202,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020202",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020505": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020505,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020505",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020606": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020606,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020606",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020707": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020707,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020707",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020808": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020808,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747797602957"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020808",
+      "type": 0
+    },
+    "PASS_SEASON:1:12020909": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12020909,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12020909",
+      "type": 0
+    },
+    "PASS_SEASON:1:12021010": {
+      "active": true,
+      "aid": 1,
+      "category": 7,
+      "context": "",
+      "entryId": 12021010,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:12021010",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000101": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000101,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747893369129"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000101",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000202": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000202,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000202",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000303": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000303,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000303",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000404": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000404,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000404",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000505": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000505,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000505",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000606": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000606,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000606",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000707": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000707,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000707",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000808": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000808,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000808",
+      "type": 0
+    },
+    "PASS_SEASON:1:13000909": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13000909,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13000909",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001010": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001010,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001010",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001111": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001111,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001111",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001212": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001212,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001212",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001313": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001313,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001313",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001414": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001414,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001414",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001515": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001515,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001515",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001616": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001616,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001616",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001717": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001717,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001717",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001818": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001818,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001818",
+      "type": 0
+    },
+    "PASS_SEASON:1:13001919": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13001919,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13001919",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002020": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002020,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002020",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002121": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002121,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002121",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002222": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002222,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002222",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002323": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002323,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002323",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002424": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002424,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002424",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002525": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002525,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002525",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002626": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002626,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747648037130"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002626",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002727": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002727,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002727",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002828": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002828,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002828",
+      "type": 0
+    },
+    "PASS_SEASON:1:13002929": {
+      "active": true,
+      "aid": 1,
+      "category": 8,
+      "context": "",
+      "entryId": 13002929,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:13002929",
+      "type": 0
+    },
+    "PASS_SEASON:1:2": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 2,
+      "extraParams": [
+        2
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 1,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:2",
+      "type": 3
+    },
+    "PASS_SEASON:1:3": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 3,
+      "extraParams": [
+        3
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:3",
+      "type": 3
+    },
+    "PASS_SEASON:1:4": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 4,
+      "extraParams": [
+        4
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:4",
+      "type": 3
+    },
+    "PASS_SEASON:1:5": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 5,
+      "extraParams": [
+        5
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:5",
+      "type": 3
+    },
+    "PASS_SEASON:1:6": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 6,
+      "extraParams": [
+        6
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:6",
+      "type": 3
+    },
+    "PASS_SEASON:1:7": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 7,
+      "extraParams": [
+        7
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:7",
+      "type": 3
+    },
+    "PASS_SEASON:1:8": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 8,
+      "extraParams": [
+        8
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:8",
+      "type": 3
+    },
+    "PASS_SEASON:1:9": {
+      "active": true,
+      "aid": 1,
+      "category": 1,
+      "context": "",
+      "entryId": 9,
+      "extraParams": [
+        9
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "PASS_SEASON:1:9",
+      "type": 3
+    },
+    "COMMON:20:111": {
+      "active": true,
+      "aid": 20,
+      "category": 0,
+      "context": "",
+      "entryId": 111,
+      "extraParams": [
+        10000
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 8,
+          "status": 0
+        }
+      ],
+      "targetValue": 10,
+      "taskId": "COMMON:20:111",
+      "type": 10
+    },
+    "COMMON:20:112": {
+      "active": true,
+      "aid": 20,
+      "category": 0,
+      "context": "",
+      "entryId": 112,
+      "extraParams": [
+        10000
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 9,
+          "status": 0
+        }
+      ],
+      "targetValue": 10,
+      "taskId": "COMMON:20:112",
+      "type": 10
+    },
+    "COMMON:20:113": {
+      "active": true,
+      "aid": 20,
+      "category": 0,
+      "context": "",
+      "entryId": 113,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 10,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:20:113",
+      "type": 11
+    },
+    "COMMON:21:114": {
+      "active": true,
+      "aid": 21,
+      "category": 0,
+      "context": "",
+      "entryId": 114,
+      "extraParams": [
+        1,
+        0,
+        86399
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 38,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:21:114",
+      "type": 7
+    },
+    "COMMON:21:115": {
+      "active": true,
+      "aid": 21,
+      "category": 0,
+      "context": "",
+      "entryId": 115,
+      "extraParams": [
+        3,
+        0,
+        86399
+      ],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747796255905"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 1,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 39,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:21:115",
+      "type": 7
+    },
+    "COMMON:21:116": {
+      "active": true,
+      "aid": 21,
+      "category": 0,
+      "context": "",
+      "entryId": 116,
+      "extraParams": [
+        6,
+        0,
+        86399
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 40,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:21:116",
+      "type": 7
+    },
+    "COMMON:22:117": {
+      "active": true,
+      "aid": 22,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 117,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747745268155"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 1,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 41,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:22:117",
+      "type": 2
+    },
+    "COMMON:22:118": {
+      "active": true,
+      "aid": 22,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 118,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747796255908"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 42,
+          "status": 1
+        }
+      ],
+      "targetValue": 2,
+      "taskId": "COMMON:22:118",
+      "type": 2
+    },
+    "COMMON:22:119": {
+      "active": true,
+      "aid": 22,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 119,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 43,
+          "status": 0
+        }
+      ],
+      "targetValue": 3,
+      "taskId": "COMMON:22:119",
+      "type": 2
+    },
+    "COMMON:22:120": {
+      "active": true,
+      "aid": 22,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 120,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 44,
+          "status": 0
+        }
+      ],
+      "targetValue": 5,
+      "taskId": "COMMON:22:120",
+      "type": 2
+    },
+    "COMMON:22:121": {
+      "active": true,
+      "aid": 22,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 121,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 45,
+          "status": 0
+        }
+      ],
+      "targetValue": 7,
+      "taskId": "COMMON:22:121",
+      "type": 2
+    },
+    "COMMON:22:122": {
+      "active": true,
+      "aid": 22,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 122,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 46,
+          "status": 0
+        }
+      ],
+      "targetValue": 10,
+      "taskId": "COMMON:22:122",
+      "type": 2
+    },
+    "COMMON:23:123": {
+      "active": true,
+      "aid": 23,
+      "category": 0,
+      "context": "",
+      "entryId": 123,
+      "extraParams": [
+        36000,
+        79200
+      ],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747916964331"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 1,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 74,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:23:123",
+      "type": 6
+    },
+    "COMMON:25:126": {
+      "active": true,
+      "aid": 25,
+      "category": 0,
+      "context": "",
+      "entryId": 126,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 48,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:25:126",
+      "type": 11
+    },
+    "COMMON:25:127": {
+      "active": true,
+      "aid": 25,
+      "category": 0,
+      "context": "",
+      "entryId": 127,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 49,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:25:127",
+      "type": 11
+    },
+    "COMMON:25:128": {
+      "active": true,
+      "aid": 25,
+      "category": 0,
+      "context": "",
+      "entryId": 128,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 50,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:25:128",
+      "type": 11
+    },
+    "COMMON:25:129": {
+      "active": true,
+      "aid": 25,
+      "category": 0,
+      "context": "",
+      "entryId": 129,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 10,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 51,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:25:129",
+      "type": 11
+    },
+    "COMMON:25:130": {
+      "active": true,
+      "aid": 25,
+      "category": 0,
+      "context": "",
+      "entryId": 130,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 20,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 52,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:25:130",
+      "type": 11
+    },
+    "COMMON:26:131": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 131,
+      "extraParams": [
+        19528
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 53,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:131",
+      "type": 10
+    },
+    "COMMON:26:132": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 132,
+      "extraParams": [
+        19529
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 54,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:132",
+      "type": 10
+    },
+    "COMMON:26:133": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 133,
+      "extraParams": [
+        19536
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 55,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:133",
+      "type": 10
+    },
+    "COMMON:26:134": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 134,
+      "extraParams": [
+        19534
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 56,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:134",
+      "type": 10
+    },
+    "COMMON:26:135": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 135,
+      "extraParams": [
+        19537
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 57,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:135",
+      "type": 10
+    },
+    "COMMON:26:136": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 136,
+      "extraParams": [
+        19518
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 58,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:136",
+      "type": 10
+    },
+    "COMMON:26:137": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 137,
+      "extraParams": [
+        19507
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 59,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:137",
+      "type": 10
+    },
+    "COMMON:26:138": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 138,
+      "extraParams": [
+        19508
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 60,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:138",
+      "type": 10
+    },
+    "COMMON:26:139": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 139,
+      "extraParams": [
+        19509
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 61,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:139",
+      "type": 10
+    },
+    "COMMON:26:140": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 140,
+      "extraParams": [
+        19510
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 62,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:140",
+      "type": 10
+    },
+    "COMMON:26:141": {
+      "active": true,
+      "aid": 26,
+      "category": 0,
+      "context": "",
+      "entryId": 141,
+      "extraParams": [
+        19511
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 5,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 63,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:26:141",
+      "type": 10
+    },
+    "COMMON:27:142": {
+      "active": true,
+      "aid": 27,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 142,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747745268155"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 1,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 64,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:27:142",
+      "type": 2
+    },
+    "COMMON:27:143": {
+      "active": true,
+      "aid": 27,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 143,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747796255908"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 65,
+          "status": 1
+        }
+      ],
+      "targetValue": 2,
+      "taskId": "COMMON:27:143",
+      "type": 2
+    },
+    "COMMON:27:144": {
+      "active": true,
+      "aid": 27,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 144,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 66,
+          "status": 0
+        }
+      ],
+      "targetValue": 3,
+      "taskId": "COMMON:27:144",
+      "type": 2
+    },
+    "COMMON:27:145": {
+      "active": true,
+      "aid": 27,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 145,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 67,
+          "status": 0
+        }
+      ],
+      "targetValue": 5,
+      "taskId": "COMMON:27:145",
+      "type": 2
+    },
+    "COMMON:27:146": {
+      "active": true,
+      "aid": 27,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 146,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 68,
+          "status": 0
+        }
+      ],
+      "targetValue": 7,
+      "taskId": "COMMON:27:146",
+      "type": 2
+    },
+    "COMMON:27:147": {
+      "active": true,
+      "aid": 27,
+      "category": 0,
+      "context": "1747785600000",
+      "entryId": 147,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 69,
+          "status": 0
+        }
+      ],
+      "targetValue": 10,
+      "taskId": "COMMON:27:147",
+      "type": 2
+    },
+    "COMMON:33:170": {
+      "active": true,
+      "aid": 33,
+      "category": 0,
+      "context": "",
+      "entryId": 170,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 1,
+      "progressTotal": 1,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 11,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:33:170",
+      "type": 21
+    },
+    "COMMON:33:171": {
+      "active": true,
+      "aid": 33,
+      "category": 0,
+      "context": "",
+      "entryId": 171,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 2,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 12,
+          "status": 0
+        }
+      ],
+      "targetValue": 5,
+      "taskId": "COMMON:33:171",
+      "type": 21
+    },
+    "COMMON:33:172": {
+      "active": true,
+      "aid": 33,
+      "category": 0,
+      "context": "",
+      "entryId": 172,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 2,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 13,
+          "status": 0
+        }
+      ],
+      "targetValue": 10,
+      "taskId": "COMMON:33:172",
+      "type": 21
+    },
+    "COMMON:33:173": {
+      "active": true,
+      "aid": 33,
+      "category": 0,
+      "context": "",
+      "entryId": 173,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 2,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 14,
+          "status": 0
+        }
+      ],
+      "targetValue": 30,
+      "taskId": "COMMON:33:173",
+      "type": 21
+    },
+    "COMMON:33:174": {
+      "active": true,
+      "aid": 33,
+      "category": 0,
+      "context": "",
+      "entryId": 174,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 2,
+      "progressTotal": 2,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 15,
+          "status": 0
+        }
+      ],
+      "targetValue": 50,
+      "taskId": "COMMON:33:174",
+      "type": 21
+    },
+    "COMMON:34:175": {
+      "active": true,
+      "aid": 34,
+      "category": 0,
+      "context": "",
+      "entryId": 175,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 6,
+      "progressTotal": 6,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 16,
+          "status": 0
+        }
+      ],
+      "targetValue": 10,
+      "taskId": "COMMON:34:175",
+      "type": 22
+    },
+    "COMMON:34:176": {
+      "active": true,
+      "aid": 34,
+      "category": 0,
+      "context": "",
+      "entryId": 176,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 6,
+      "progressTotal": 6,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 17,
+          "status": 0
+        }
+      ],
+      "targetValue": 20,
+      "taskId": "COMMON:34:176",
+      "type": 22
+    },
+    "COMMON:34:177": {
+      "active": true,
+      "aid": 34,
+      "category": 0,
+      "context": "",
+      "entryId": 177,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 6,
+      "progressTotal": 6,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 18,
+          "status": 0
+        }
+      ],
+      "targetValue": 30,
+      "taskId": "COMMON:34:177",
+      "type": 22
+    },
+    "COMMON:34:178": {
+      "active": true,
+      "aid": 34,
+      "category": 0,
+      "context": "",
+      "entryId": 178,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 6,
+      "progressTotal": 6,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 19,
+          "status": 0
+        }
+      ],
+      "targetValue": 40,
+      "taskId": "COMMON:34:178",
+      "type": 22
+    },
+    "COMMON:34:179": {
+      "active": true,
+      "aid": 34,
+      "category": 0,
+      "context": "",
+      "entryId": 179,
+      "extraParams": [
+        10
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 6,
+      "progressTotal": 6,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 20,
+          "status": 0
+        }
+      ],
+      "targetValue": 50,
+      "taskId": "COMMON:34:179",
+      "type": 22
+    },
+    "COMMON:35:180": {
+      "active": true,
+      "aid": 35,
+      "category": 0,
+      "context": "",
+      "entryId": 180,
+      "extraParams": [
+        20
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 21,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:35:180",
+      "type": 21
+    },
+    "COMMON:35:181": {
+      "active": true,
+      "aid": 35,
+      "category": 0,
+      "context": "",
+      "entryId": 181,
+      "extraParams": [
+        20
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 22,
+          "status": 0
+        }
+      ],
+      "targetValue": 2,
+      "taskId": "COMMON:35:181",
+      "type": 21
+    },
+    "COMMON:35:182": {
+      "active": true,
+      "aid": 35,
+      "category": 0,
+      "context": "",
+      "entryId": 182,
+      "extraParams": [
+        20
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 23,
+          "status": 0
+        }
+      ],
+      "targetValue": 5,
+      "taskId": "COMMON:35:182",
+      "type": 21
+    },
+    "COMMON:35:183": {
+      "active": true,
+      "aid": 35,
+      "category": 0,
+      "context": "",
+      "entryId": 183,
+      "extraParams": [
+        20
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 24,
+          "status": 0
+        }
+      ],
+      "targetValue": 8,
+      "taskId": "COMMON:35:183",
+      "type": 21
+    },
+    "COMMON:35:184": {
+      "active": true,
+      "aid": 35,
+      "category": 0,
+      "context": "",
+      "entryId": 184,
+      "extraParams": [
+        20
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 25,
+          "status": 0
+        }
+      ],
+      "targetValue": 12,
+      "taskId": "COMMON:35:184",
+      "type": 21
+    },
+    "COMMON:36:185": {
+      "active": true,
+      "aid": 36,
+      "category": 0,
+      "context": "1748250723914",
+      "entryId": 185,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747748869323"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 3600,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 26,
+          "status": 1
+        }
+      ],
+      "targetValue": 3600,
+      "taskId": "COMMON:36:185",
+      "type": 4
+    },
+    "COMMON:36:186": {
+      "active": true,
+      "aid": 36,
+      "category": 0,
+      "context": "1748250723914",
+      "entryId": 186,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747820594989"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 21600,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 27,
+          "status": 1
+        }
+      ],
+      "targetValue": 21600,
+      "taskId": "COMMON:36:186",
+      "type": 4
+    },
+    "COMMON:36:187": {
+      "active": true,
+      "aid": 36,
+      "category": 0,
+      "context": "1748250723914",
+      "entryId": 187,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1748229266835"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 86400,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 28,
+          "status": 1
+        }
+      ],
+      "targetValue": 86400,
+      "taskId": "COMMON:36:187",
+      "type": 4
+    },
+    "COMMON:37:188": {
+      "active": true,
+      "aid": 37,
+      "category": 0,
+      "context": "",
+      "entryId": 188,
+      "extraParams": [
+        1747440000,
+        1747612799
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 29,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:37:188",
+      "type": 5
+    },
+    "COMMON:37:189": {
+      "active": true,
+      "aid": 37,
+      "category": 0,
+      "context": "",
+      "entryId": 189,
+      "extraParams": [
+        1748044800,
+        1748217599
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 30,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:37:189",
+      "type": 5
+    },
+    "COMMON:37:190": {
+      "active": true,
+      "aid": 37,
+      "category": 0,
+      "context": "",
+      "entryId": 190,
+      "extraParams": [
+        1748649600,
+        1748822399
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 31,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:37:190",
+      "type": 5
+    },
+    "COMMON:37:191": {
+      "active": true,
+      "aid": 37,
+      "category": 0,
+      "context": "",
+      "entryId": 191,
+      "extraParams": [
+        1749254400,
+        1749427199
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 32,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:37:191",
+      "type": 5
+    },
+    "COMMON:38:192": {
+      "active": true,
+      "aid": 38,
+      "category": 0,
+      "context": "",
+      "entryId": 192,
+      "extraParams": [
+        1000001
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 33,
+          "status": 0
+        }
+      ],
+      "targetValue": 50,
+      "taskId": "COMMON:38:192",
+      "type": 8
+    },
+    "COMMON:38:193": {
+      "active": true,
+      "aid": 38,
+      "category": 0,
+      "context": "",
+      "entryId": 193,
+      "extraParams": [
+        1000001
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 34,
+          "status": 0
+        }
+      ],
+      "targetValue": 150,
+      "taskId": "COMMON:38:193",
+      "type": 8
+    },
+    "COMMON:38:194": {
+      "active": true,
+      "aid": 38,
+      "category": 0,
+      "context": "",
+      "entryId": 194,
+      "extraParams": [
+        1000001
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 35,
+          "status": 0
+        }
+      ],
+      "targetValue": 200,
+      "taskId": "COMMON:38:194",
+      "type": 8
+    },
+    "COMMON:38:195": {
+      "active": true,
+      "aid": 38,
+      "category": 0,
+      "context": "",
+      "entryId": 195,
+      "extraParams": [
+        1000001
+      ],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 1,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 36,
+          "status": 0
+        }
+      ],
+      "targetValue": 300,
+      "taskId": "COMMON:38:195",
+      "type": 8
+    },
+    "COMMON:39:196": {
+      "active": true,
+      "aid": 39,
+      "category": 0,
+      "context": "",
+      "entryId": 196,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 100,
+      "module": "COMMON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 37,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "COMMON:39:196",
+      "type": 11
+    },
+    "FIRST_PAY:1": {
+      "active": true,
+      "aid": 1,
+      "category": 0,
+      "context": "",
+      "entryId": 0,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "FIRST_PAY",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": 71,
+          "status": 0
+        },
+        {
+          "instanceId": 72,
+          "status": 0
+        },
+        {
+          "instanceId": 73,
+          "status": 0
+        }
+      ],
+      "targetValue": 6,
+      "taskId": "FIRST_PAY:1",
+      "type": 1
+    },
+    "PASS_SEASON:1:11000112": {
+      "active": true,
+      "aid": 1,
+      "category": 6,
+      "context": "",
+      "entryId": 11000112,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:11000112",
+      "type": 0
+    },
+    "PASS_SEASON:1:11000314": {
+      "active": true,
+      "aid": 1,
+      "category": 6,
+      "context": "",
+      "entryId": 11000314,
+      "extraParams": [],
+      "finish": true,
+      "finishTime": {
+        "$numberLong": "1747899694165"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 1
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:11000314",
+      "type": 0
+    },
+    "PASS_SEASON:1:11000404": {
+      "active": true,
+      "aid": 1,
+      "category": 6,
+      "context": "",
+      "entryId": 11000404,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:11000404",
+      "type": 0
+    },
+    "PASS_SEASON:1:11000622": {
+      "active": true,
+      "aid": 1,
+      "category": 6,
+      "context": "",
+      "entryId": 11000622,
+      "extraParams": [],
+      "finish": false,
+      "finishTime": {
+        "$numberLong": "0"
+      },
+      "maxRepeat": 0,
+      "module": "PASS_SEASON",
+      "progress": 0,
+      "progressTotal": 0,
+      "repeat": 0,
+      "rewardList": [
+        {
+          "instanceId": -1,
+          "status": 0
+        }
+      ],
+      "targetValue": 1,
+      "taskId": "PASS_SEASON:1:11000622",
+      "type": 0
+    }
+  }
+}
