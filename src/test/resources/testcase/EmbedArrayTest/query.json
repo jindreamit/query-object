@@ -1,0 +1,49 @@
+{
+  "type": "UpdateArray",
+  "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.rewardList",
+  "filter": {
+    "operator": "OR",
+    "value": [
+      {
+        "operator": "AND",
+        "value": [
+          {
+            "operator": "EQ",
+            "key": "status",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  "update": [
+  ],
+  "children": [
+    {
+      "type": "UpdateArray",
+      "key": "content",
+      "filter": {
+        "operator": "OR",
+        "value": [
+          {
+            "operator": "AND",
+            "value": [
+              {
+                "operator": "EQ",
+                "key": "itemId",
+                "value": 2
+              }
+            ]
+          }
+        ]
+      },
+      "update": [
+        {
+          "operator": "INC",
+          "key": "num",
+          "value": -1
+        }
+      ]
+    }
+  ]
+}

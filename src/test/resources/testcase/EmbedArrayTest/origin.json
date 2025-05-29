@@ -1,0 +1,62 @@
+{
+  "taskMap": {
+    "SEVEN_DAYS_LOGIN:1:1": {
+      "rewardList": [
+        {
+          "instanceId": 1,
+          "status": 1,
+          "content": [
+            {
+              "itemId": 1,
+              "num": 1
+            },
+            {
+              "itemId": 2,
+              "num": 1
+            },
+            {
+              "itemId": 3,
+              "num": 2
+            }
+          ]
+        },
+        {
+          "instanceId": 2,
+          "status": 1,
+          "content": [
+            {
+              "itemId": 1,
+              "num": 1
+            },
+            {
+              "itemId": 2,
+              "num": 1
+            },
+            {
+              "itemId": 3,
+              "num": 2
+            }
+          ]
+        },
+        {
+          "instanceId": 3,
+          "status": 2,
+          "content": [
+            {
+              "itemId": 1,
+              "num": 1
+            },
+            {
+              "itemId": 2,
+              "num": 1
+            },
+            {
+              "itemId": 3,
+              "num": 2
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

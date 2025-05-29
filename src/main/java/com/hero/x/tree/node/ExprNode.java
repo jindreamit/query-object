@@ -4,6 +4,7 @@ import com.hero.x.tree.Context;
 import com.hero.x.tree.exception.TreeEvaluateException;
 
 import java.math.BigDecimal;
+import java.util.function.BiFunction;
 
 public class ExprNode extends AbstractNode<ExprNode, ExprType>
 {
@@ -22,70 +23,56 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
 
         switch (type)
         {
-            case SET ->
+            case SET:
             {
                 context.getTree().setProperty(object, this.path, this.value);
+                break;
             }
-
-            case INC ->
-            {
+            case INC: {
                 Object currentValue = context.getTree().getProperty(object, this.path);
-                if (currentValue == null)
-                {
-                    currentValue = 0;
-                }
-                BigDecimal current = new BigDecimal(currentValue.toString());
-                BigDecimal increment = new BigDecimal(value.toString());
-                context.getTree().setProperty(object, this.path, current.add(increment));
+                Object result = calculateAndPreserveType(currentValue, value, BigDecimal::add);
+                context.getTree().setProperty(object, this.path, result);
+                break;
             }
-
-            case MUL ->
-            {
+            case MUL: {
                 Object currentValue = context.getTree().getProperty(object, this.path);
-                if (currentValue == null)
-                {
-                    currentValue = 0;
-                }
-                BigDecimal current = new BigDecimal(currentValue.toString());
-                BigDecimal multiplier = new BigDecimal(value.toString());
-                context.getTree().setProperty(object, this.path, current.multiply(multiplier));
+                Object result = calculateAndPreserveType(currentValue, value, BigDecimal::multiply);
+                context.getTree().setProperty(object, this.path, result);
+                break;
             }
-
-            case MIN ->
-            {
+            case MIN: {
                 Object currentValue = context.getTree().getProperty(object, this.path);
-                if (currentValue == null)
-                {
+                if (currentValue == null) {
                     context.getTree().setProperty(object, this.path, value);
-                } else
-                {
+                } else {
                     BigDecimal current = new BigDecimal(currentValue.toString());
                     BigDecimal compare = new BigDecimal(value.toString());
-                    if (compare.compareTo(current) < 0)
-                    {
-                        context.getTree().setProperty(object, this.path, value);
+                    if (compare.compareTo(current) < 0) {
+                        // 取更小值，保持类型
+                        Object result = calculateAndPreserveType(currentValue, value, (a, b) -> b);
+                        context.getTree().setProperty(object, this.path, result);
                     }
                 }
+                break;
             }
-
-            case MAX ->
-            {
+            case MAX: {
                 Object currentValue = context.getTree().getProperty(object, this.path);
-                if (currentValue == null)
-                {
+                if (currentValue == null) {
                     context.getTree().setProperty(object, this.path, value);
-                } else
-                {
+                } else {
                     BigDecimal current = new BigDecimal(currentValue.toString());
                     BigDecimal compare = new BigDecimal(value.toString());
-                    if (compare.compareTo(current) > 0)
-                    {
-                        context.getTree().setProperty(object, this.path, value);
+                    if (compare.compareTo(current) > 0) {
+                        // 取更大值，保持类型
+                        Object result = calculateAndPreserveType(currentValue, value, (a, b) -> b);
+                        context.getTree().setProperty(object, this.path, result);
                     }
                 }
+                break;
+            }            default:
+            {
+                throw new UnsupportedOperationException("Unsupported type: " + type);
             }
-
-            default -> throw new UnsupportedOperationException("Unsupported type: " + type);
         }
     }
 
@@ -94,4 +81,29 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
     {
         throw new UnsupportedOperationException("ExprNode cannot have children");
     }
+    private Object calculateAndPreserveType(Object currentValue, Object operand,
+                                            BiFunction<BigDecimal, BigDecimal, BigDecimal> operation) {
+        if (currentValue == null) {
+            currentValue = 0;
+        }
+        BigDecimal current = new BigDecimal(currentValue.toString());
+        BigDecimal op = new BigDecimal(operand.toString());
+        BigDecimal result = operation.apply(current, op);
+        if (currentValue instanceof Integer) {
+            return result.intValue();
+        } else if (currentValue instanceof Long) {
+            return result.longValue();
+        } else if (currentValue instanceof Double) {
+            return result.doubleValue();
+        } else if (currentValue instanceof Float) {
+            return result.floatValue();
+        } else if (currentValue instanceof Short) {
+            return result.shortValue();
+        } else if (currentValue instanceof Byte) {
+            return result.byteValue();
+        } else {
+            return result;
+        }
+    }
+
 }

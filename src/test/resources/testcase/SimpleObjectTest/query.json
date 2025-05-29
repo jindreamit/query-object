@@ -3,7 +3,6 @@
   "filter": {},
   "update": [
     {
-      "type": "expr",
       "operator": "SET",
       "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.finish",
       "value": false

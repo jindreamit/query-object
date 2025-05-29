@@ -7,10 +7,11 @@ public class TestCaseManager
 {
     public static void main(String[] args) throws Exception
     {
-        Files.list(Path.of(TestCaseManager.class.getResource("/testcase").toURI())).parallel().forEach(s ->
-        {
-            JsonTestCase testCase = new JsonTestCase(s);
-            System.out.printf("[RUN][%s][PASS]:%s\n", s, testCase.run());
-        });
+        Files.list(Path.of(TestCaseManager.class.getResource("/testcase").toURI()))
+            .forEach(s ->
+            {
+                JsonTestCase testCase = new JsonTestCase(s);
+                System.out.printf("[RUN][%s][PASS]:%s\n", s, testCase.run());
+            });
     }
 }
