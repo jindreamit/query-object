@@ -6,7 +6,6 @@ import com.hero.x.tree.QueryTree;
 import com.hero.x.tree.factory.TreeFactory;
 import com.hero.x.tree.function.JsonObjectFunction;
 
-import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -51,7 +50,10 @@ public class JsonTestCase
             {
                 return true;
             }
-            System.out.println(originData);
+            System.out.println("Test case failed");
+            System.out.println("====================Modified JSON================");
+            System.out.println(originData.toJSONString());
+            System.out.println("====================Expect JSON================");
             System.out.println(resultData());
         } catch (Exception e)
         {
