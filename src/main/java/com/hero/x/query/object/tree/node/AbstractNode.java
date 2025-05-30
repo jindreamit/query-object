@@ -1,4 +1,4 @@
-package com.hero.x.tree.node;
+package com.hero.x.query.object.tree.node;
 
 import java.util.ArrayList;
 import java.util.Collections;

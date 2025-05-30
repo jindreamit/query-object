@@ -1,8 +1,8 @@
 package test;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.hero.x.tree.factory.TreeFactory;
-import com.hero.x.tree.function.JsonObjectFunction;
+import com.hero.x.query.object.tree.factory.TreeFactory;
+import com.hero.x.query.object.tree.function.JsonObjectFunction;
 
 public class ManuallyTest
 {

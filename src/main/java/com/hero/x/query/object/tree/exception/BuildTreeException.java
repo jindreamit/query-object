@@ -1,4 +1,4 @@
-package com.hero.x.tree.exception;
+package com.hero.x.query.object.tree.exception;
 
 public class BuildTreeException extends RuntimeException
 {

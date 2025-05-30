@@ -1,0 +1,32 @@
+{
+  "type": "UpdateArray",
+  "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.rewardList",
+  "filter": {
+    "operator": "OR",
+    "value": [
+      {
+        "operator": "EQ",
+        "key": "instanceId",
+        "value": 1
+      }
+    ]
+  },
+  "update": [
+  ],
+  "children": [
+    {
+      "type": "UpdateArray",
+      "key": "content",
+      "filter": {},
+      "update": [
+        {
+          "operator": "PUSH",
+          "value": {
+            "itemId": 4,
+            "num": 1
+          }
+        }
+      ]
+    }
+  ]
+}

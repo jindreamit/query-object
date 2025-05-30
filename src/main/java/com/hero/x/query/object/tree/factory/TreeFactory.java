@@ -1,17 +1,17 @@
-package com.hero.x.tree.factory;
+package com.hero.x.query.object.tree.factory;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import com.hero.x.tree.exception.BuildTreeException;
-import com.hero.x.tree.IObjectFunction;
-import com.hero.x.tree.QueryTree;
-import com.hero.x.tree.node.FilterNode;
-import com.hero.x.tree.node.ExprNode;
-import com.hero.x.tree.node.ExprType;
-import com.hero.x.tree.node.FilterType;
-import com.hero.x.tree.node.UpdateNode;
-import com.hero.x.tree.node.UpdateType;
+import com.hero.x.query.object.tree.exception.BuildTreeException;
+import com.hero.x.query.object.tree.IObjectFunction;
+import com.hero.x.query.object.tree.QueryTree;
+import com.hero.x.query.object.tree.node.FilterNode;
+import com.hero.x.query.object.tree.node.ExprNode;
+import com.hero.x.query.object.tree.node.ExprType;
+import com.hero.x.query.object.tree.node.FilterType;
+import com.hero.x.query.object.tree.node.UpdateNode;
+import com.hero.x.query.object.tree.node.UpdateType;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -83,8 +83,12 @@ public class TreeFactory
         {
             case INC:
             case SET:
+            case MIN:
+            case MAX:
+            case MUL:
+            case PULL:
+            case PUSH:
             {
-                JSONArray childrenArray = jsonObject.getJSONArray("update");
                 return exprNode;
             }
         }

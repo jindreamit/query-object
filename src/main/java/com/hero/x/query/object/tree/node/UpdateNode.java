@@ -1,6 +1,6 @@
-package com.hero.x.tree.node;
+package com.hero.x.query.object.tree.node;
 
-import com.hero.x.tree.Context;
+import com.hero.x.query.object.tree.Context;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,7 +24,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
         {
             case UpdateObject:
             {
-                if (filterNode==null||filterNode.evaluate(context, object))
+                if (evaluate(context, object))
                 {
                     for (ExprNode exprNode : exprNodeList)
                     {
@@ -35,7 +35,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
             }
             case UpdateArray:
             {
-                List<?> list = context.getTree().getList(object, this.path);
+                List<? super Object> list = context.getTree().getList(object, this.path);
                 List<ExprNode> primitiveExprNodeList = new ArrayList<>();
                 List<ExprNode> notPrimitiveExprNodeList = new ArrayList<>();
                 for (ExprNode exprNode : exprNodeList)
@@ -48,10 +48,17 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                         notPrimitiveExprNodeList.add(exprNode);
                     }
                 }
+                for (ExprNode exprNode : notPrimitiveExprNodeList)
+                {
+                    if (exprNode.type() == ExprType.PUSH)
+                    {
+                        list.add(exprNode.value);
+                    }
+                }
                 for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
                 {
                     Object o = iterator.next();
-                    if (filterNode.evaluate(context, o))
+                    if (evaluate(context, o))
                     {
                         for (ExprNode exprNode : notPrimitiveExprNodeList)
                         {
@@ -65,7 +72,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                 }
                 for (Object o : list)
                 {
-                    if (filterNode.evaluate(context, o))
+                    if (evaluate(context, o))
                     {
                         for (ExprNode exprNode : primitiveExprNodeList)
                         {
@@ -79,6 +86,15 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                 }
             }
         }
+    }
+
+    private boolean evaluate(Context context, Object object)
+    {
+        if (filterNode == null)
+        {
+            return true;
+        }
+        return filterNode.evaluate(context, object);
     }
 
 }

@@ -1,6 +1,6 @@
-package com.hero.x.tree;
+package com.hero.x.query.object.tree;
 
-import com.hero.x.tree.node.UpdateNode;
+import com.hero.x.query.object.tree.node.UpdateNode;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class QueryTree implements IObjectFunction
     }
 
     @Override
-    public List<?> getList(Object o, String path)
+    public List<? super Object> getList(Object o, String path)
     {
         return objectFunction.getList(o, path);
     }

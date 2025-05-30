@@ -1,9 +1,9 @@
-package com.hero.x.tree.function;
+package com.hero.x.query.object.tree.function;
 
 
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import com.hero.x.tree.IObjectFunction;
+import com.hero.x.query.object.tree.IObjectFunction;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class JsonObjectFunction implements IObjectFunction
     }
 
     @Override
-    public List<?> getList(Object o, String path)
+    public List<? super Object> getList(Object o, String path)
     {
         verifyType(o);
         JSONObject t = (JSONObject) o;
