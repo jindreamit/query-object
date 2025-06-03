@@ -1,7 +1,6 @@
 package com.hero.x.query.object.tree.function;
 
 
-import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import com.hero.x.query.object.tree.IObjectFunction;
 
@@ -15,23 +14,6 @@ public class JsonObjectFunction implements IObjectFunction
         {
             throw new RuntimeException("unSupport type :" + o.getClass().getSimpleName());
         }
-    }
-
-    @Override
-    public List<? super Object> getList(Object o, String path)
-    {
-        verifyType(o);
-        JSONObject t = (JSONObject) o;
-        List<String> pathList = splitPath(path);
-        for (int i = 0; i < pathList.size(); i++)
-        {
-            if (i == pathList.size() - 1)
-            {
-                return t.getJSONArray(pathList.get(i));
-            }
-            t = t.getJSONObject(pathList.get(i));
-        }
-        return new JSONArray();
     }
 
     @Override

@@ -35,7 +35,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
             }
             case UpdateArray:
             {
-                List<? super Object> list = context.getTree().getList(object, this.path);
+                List<? super Object> list =(List<? super Object>) context.getTree().getProperty(object, this.path);
                 List<ExprNode> primitiveExprNodeList = new ArrayList<>();
                 List<ExprNode> notPrimitiveExprNodeList = new ArrayList<>();
                 for (ExprNode exprNode : exprNodeList)

@@ -2,8 +2,6 @@ package com.hero.x.query.object.tree;
 
 import com.hero.x.query.object.tree.node.UpdateNode;
 
-import java.util.List;
-
 public class QueryTree implements IObjectFunction
 {
     private final UpdateNode root;
@@ -24,12 +22,6 @@ public class QueryTree implements IObjectFunction
     {
         Context context = new Context(this, object);
         root.apply(context, object);
-    }
-
-    @Override
-    public List<? super Object> getList(Object o, String path)
-    {
-        return objectFunction.getList(o, path);
     }
 
     @Override
