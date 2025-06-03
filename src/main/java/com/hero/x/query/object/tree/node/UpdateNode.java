@@ -35,8 +35,8 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
             }
             case UpdateArray:
             {
-                WrappedObject wrappedList=context.getTree().getProperty(wrappedObject, this.path);
-                List<? super Object> list =(List<? super Object>) wrappedList.getObject();
+                WrappedObject wrappedList = context.getTree().getProperty(wrappedObject, this.path);
+                List<? super Object> list = (List<? super Object>) wrappedList.getObject();
                 List<ExprNode> primitiveExprNodeList = new ArrayList<>();
                 List<ExprNode> notPrimitiveExprNodeList = new ArrayList<>();
                 for (ExprNode exprNode : exprNodeList)
@@ -53,15 +53,15 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                 {
                     if (exprNode.type() == ExprType.PUSH)
                     {
-                        list.add(exprNode.value);
+                        context.getTree().push(wrappedList, exprNode.value);
                     }
                 }
-                if(!notPrimitiveExprNodeList.isEmpty())
+                if (!notPrimitiveExprNodeList.isEmpty())
                 {
                     for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
                     {
                         Object o = iterator.next();
-                        WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, null, o);
+                        WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
                         if (evaluate(context, wrappedElement))
                         {
                             for (ExprNode exprNode : notPrimitiveExprNodeList)
@@ -77,7 +77,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                 }
                 for (Object o : list)
                 {
-                    WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, null, o);
+                    WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
                     if (evaluate(context, wrappedElement))
                     {
                         for (ExprNode exprNode : primitiveExprNodeList)

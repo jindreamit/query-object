@@ -9,18 +9,9 @@ import java.util.List;
 
 public class JsonObjectFunction implements IObjectFunction
 {
-    private void verifyType(Object o)
-    {
-        if (!(o instanceof WrappedObject))
-        {
-            throw new RuntimeException("unSupport type :" + o.getClass().getSimpleName());
-        }
-    }
-
     @Override
     public WrappedObject getProperty(WrappedObject o, String path)
     {
-        verifyType(o);
         WrappedObject t = o;
         List<String> pathList = splitPath(path);
         for (int i = 0; i < pathList.size(); i++)
@@ -28,10 +19,10 @@ public class JsonObjectFunction implements IObjectFunction
             if (i == pathList.size() - 1)
             {
                 JSONObject jsonObject = t.getAs();
-                return WrappedObject.wrapForJson(jsonObject.get(pathList.get(i)));
+                return WrappedObject.wrapUnsafe(jsonObject.get(pathList.get(i)));
             }
             JSONObject jsonObject = t.getAs();
-            t = WrappedObject.wrapForJson(jsonObject.getJSONObject(pathList.get(i)));
+            t = WrappedObject.wrapUnsafe(jsonObject.getJSONObject(pathList.get(i)));
         }
         return null;
     }
@@ -39,7 +30,6 @@ public class JsonObjectFunction implements IObjectFunction
     @Override
     public void setProperty(WrappedObject o, String path, Object value)
     {
-        verifyType(o);
         WrappedObject t = o;
         List<String> pathList = splitPath(path);
         for (int i = 0; i < pathList.size(); i++)
@@ -51,7 +41,14 @@ public class JsonObjectFunction implements IObjectFunction
                 return;
             }
             JSONObject jsonObject = t.getAs();
-            t = WrappedObject.wrapForJson(jsonObject.getJSONObject(pathList.get(i)));
+            t = WrappedObject.wrapUnsafe(jsonObject.getJSONObject(pathList.get(i)));
         }
+    }
+
+    @Override
+    public void push(WrappedObject wrappedObject, Object value)
+    {
+        List<? super Object> list = wrappedObject.getAs();
+        list.add(value);
     }
 }

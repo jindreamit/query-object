@@ -38,6 +38,12 @@ public class QueryTree implements IObjectFunction
     }
 
     @Override
+    public void push(WrappedObject wrappedObject, Object value)
+    {
+        objectFunction.push(wrappedObject, value);
+    }
+
+    @Override
     public WrappedObject getProperty(WrappedObject wrappedObject, String path)
     {
         return objectFunction.getProperty(wrappedObject, path);

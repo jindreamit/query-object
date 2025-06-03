@@ -46,7 +46,7 @@ public class JsonTestCase
             TreeFactory treeFactory = new TreeFactory();
             QueryTree queryTree = treeFactory.buildFromJson(queryString(), supplyObjectFunction());
             JSONObject originData = JSONObject.parseObject(originData());
-            queryTree.apply(WrappedObject.wrapForJson(originData));
+            queryTree.apply(WrappedObject.wrapUnsafe(originData));
             if (originData.equals(JSONObject.parseObject(resultData())))
             {
                 return true;
