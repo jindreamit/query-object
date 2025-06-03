@@ -1,6 +1,7 @@
 package com.hero.x.query.object.tree;
 
 import com.hero.x.query.object.tree.node.UpdateNode;
+import com.hero.x.query.object.tree.node.WrappedObject;
 
 public class QueryTree implements IObjectFunction
 {
@@ -20,19 +21,26 @@ public class QueryTree implements IObjectFunction
 
     public void apply(Object object)
     {
-        Context context = new Context(this, object);
-        root.apply(context, object);
+        WrappedObject wrappedObject = WrappedObject.wrapRoot(object);
+        apply(wrappedObject);
     }
 
-    @Override
-    public Object getProperty(Object o, String path)
+    public void apply(WrappedObject wrappedObject)
     {
-        return objectFunction.getProperty(o, path);
+        Context context = new Context(this, wrappedObject);
+        root.apply(context, wrappedObject);
     }
 
     @Override
-    public void setProperty(Object o, String path, Object value)
+    public void setProperty(WrappedObject o, String path, Object value)
     {
         objectFunction.setProperty(o, path, value);
     }
+
+    @Override
+    public WrappedObject getProperty(WrappedObject wrappedObject, String path)
+    {
+        return objectFunction.getProperty(wrappedObject, path);
+    }
+
 }

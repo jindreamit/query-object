@@ -18,24 +18,25 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
         this.exprNodeList = exprNodeList;
     }
 
-    public void apply(Context context, Object object)
+    public void apply(Context context, WrappedObject wrappedObject)
     {
         switch (type())
         {
             case UpdateObject:
             {
-                if (evaluate(context, object))
+                if (evaluate(context, wrappedObject))
                 {
                     for (ExprNode exprNode : exprNodeList)
                     {
-                        exprNode.apply(context, object);
+                        exprNode.apply(context, wrappedObject);
                     }
                 }
                 return;
             }
             case UpdateArray:
             {
-                List<? super Object> list =(List<? super Object>) context.getTree().getProperty(object, this.path);
+                WrappedObject wrappedList=context.getTree().getProperty(wrappedObject, this.path);
+                List<? super Object> list =(List<? super Object>) wrappedList.getObject();
                 List<ExprNode> primitiveExprNodeList = new ArrayList<>();
                 List<ExprNode> notPrimitiveExprNodeList = new ArrayList<>();
                 for (ExprNode exprNode : exprNodeList)
@@ -55,32 +56,37 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                         list.add(exprNode.value);
                     }
                 }
-                for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
+                if(!notPrimitiveExprNodeList.isEmpty())
                 {
-                    Object o = iterator.next();
-                    if (evaluate(context, o))
+                    for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
                     {
-                        for (ExprNode exprNode : notPrimitiveExprNodeList)
+                        Object o = iterator.next();
+                        WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, null, o);
+                        if (evaluate(context, wrappedElement))
                         {
-                            if (exprNode.type() == ExprType.PULL)
+                            for (ExprNode exprNode : notPrimitiveExprNodeList)
                             {
-                                iterator.remove();
-                                break;
+                                if (exprNode.type() == ExprType.PULL)
+                                {
+                                    iterator.remove();
+                                    break;
+                                }
                             }
                         }
                     }
                 }
                 for (Object o : list)
                 {
-                    if (evaluate(context, o))
+                    WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, null, o);
+                    if (evaluate(context, wrappedElement))
                     {
                         for (ExprNode exprNode : primitiveExprNodeList)
                         {
-                            exprNode.apply(context, o);
+                            exprNode.apply(context, wrappedElement);
                         }
                         for (UpdateNode updateNode : getChildren())
                         {
-                            updateNode.apply(context, o);
+                            updateNode.apply(context, wrappedElement);
                         }
                     }
                 }
@@ -88,13 +94,13 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
         }
     }
 
-    private boolean evaluate(Context context, Object object)
+    private boolean evaluate(Context context, WrappedObject wrappedObject)
     {
         if (filterNode == null)
         {
             return true;
         }
-        return filterNode.evaluate(context, object);
+        return filterNode.evaluate(context, wrappedObject);
     }
 
 }

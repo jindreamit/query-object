@@ -1,11 +1,14 @@
 package test;
 
+import org.junit.Test;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class TestCaseManager
 {
-    public static void main(String[] args) throws Exception
+    @Test
+    public void main() throws Exception
     {
         Files.list(Path.of(TestCaseManager.class.getResource("/testcase").toURI()))
             .forEach(s ->

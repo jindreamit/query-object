@@ -5,6 +5,7 @@ import com.hero.x.query.object.tree.IObjectFunction;
 import com.hero.x.query.object.tree.QueryTree;
 import com.hero.x.query.object.tree.factory.TreeFactory;
 import com.hero.x.query.object.tree.function.JsonObjectFunction;
+import com.hero.x.query.object.tree.node.WrappedObject;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -45,7 +46,7 @@ public class JsonTestCase
             TreeFactory treeFactory = new TreeFactory();
             QueryTree queryTree = treeFactory.buildFromJson(queryString(), supplyObjectFunction());
             JSONObject originData = JSONObject.parseObject(originData());
-            queryTree.apply(originData);
+            queryTree.apply(WrappedObject.wrapForJson(originData));
             if (originData.equals(JSONObject.parseObject(resultData())))
             {
                 return true;
@@ -57,8 +58,8 @@ public class JsonTestCase
             System.out.println(resultData());
         } catch (Exception e)
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return false;
+        throw new RuntimeException("test case failed");
     }
 }

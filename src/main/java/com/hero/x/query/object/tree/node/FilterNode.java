@@ -12,7 +12,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
     {
         super(type, path, value);
     }
-    public boolean evaluate(Context context, Object object)
+    public boolean evaluate(Context context, WrappedObject object)
     {
         if (object == null)
         {
@@ -22,63 +22,63 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
         {
             case EQ ->
             {
-                Object property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getTree().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
                 }
-                return property.equals(this.value);
+                return property.getObject().equals(this.value);
             }
             case NE ->
             {
-                Object property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getTree().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
                 }
-                return !property.equals(this.value);
+                return !property.getObject().equals(this.value);
             }
             case GT ->
             {
-                Object property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getTree().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
                 }
-                BigDecimal bd1 = new BigDecimal(object.toString());
-                BigDecimal bd2 = new BigDecimal(property.toString());
+                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
+                BigDecimal bd2 = new BigDecimal(this.value.toString());
                 return bd1.compareTo(bd2) > 0;
             }
             case GTE ->
             {
-                Object property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getTree().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
                 }
-                BigDecimal bd1 = new BigDecimal(property.toString());
+                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
                 BigDecimal bd2 = new BigDecimal(this.value.toString());
                 return bd1.compareTo(bd2) >= 0;
             }
             case LT ->
             {
-                Object property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getTree().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
                 }
-                BigDecimal bd1 = new BigDecimal(property.toString());
+                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
                 BigDecimal bd2 = new BigDecimal(this.value.toString());
                 return bd1.compareTo(bd2) < 0;
             }
             case LTE ->
             {
-                Object property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getTree().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
                 }
-                BigDecimal bd1 = new BigDecimal(property.toString());
+                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
                 BigDecimal bd2 = new BigDecimal(this.value.toString());
                 return bd1.compareTo(bd2) <= 0;
             }
