@@ -24,7 +24,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
         {
             case EQ ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
@@ -33,7 +33,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case NE ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
@@ -42,7 +42,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case GT ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
@@ -53,7 +53,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case GTE ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
@@ -64,7 +64,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case LT ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
@@ -75,7 +75,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case LTE ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 if (property == null)
                 {
                     throw new TreeEvaluateException(String.format("property is null,path:%s", path));
@@ -109,7 +109,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case ALL ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 List<? super Object> list = property.getAs();
                 for (Object o : list)
                 {
@@ -126,7 +126,7 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
             }
             case EXIST ->
             {
-                WrappedObject property = context.getTree().getProperty(object, this.path);
+                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
                 List<? super Object> list = property.getAs();
                 for (Object o : list)
                 {

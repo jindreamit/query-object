@@ -23,29 +23,29 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
         {
             case SET:
             {
-                context.getTree().setProperty(wrappedObject, this.path, this.value);
+                context.getObjectFunction().setProperty(wrappedObject, this.path, this.value);
                 break;
             }
             case INC:
             {
-                Object currentValue = context.getTree().getProperty(wrappedObject, this.path).getObject();
+                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
                 Object result = calculateAndPreserveType(currentValue, value, BigDecimal::add);
-                context.getTree().setProperty(wrappedObject, this.path, result);
+                context.getObjectFunction().setProperty(wrappedObject, this.path, result);
                 break;
             }
             case MUL:
             {
-                Object currentValue = context.getTree().getProperty(wrappedObject, this.path).getObject();
+                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
                 Object result = calculateAndPreserveType(currentValue, value, BigDecimal::multiply);
-                context.getTree().setProperty(wrappedObject, this.path, result);
+                context.getObjectFunction().setProperty(wrappedObject, this.path, result);
                 break;
             }
             case MIN:
             {
-                Object currentValue = context.getTree().getProperty(wrappedObject, this.path).getObject();
+                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
                 if (currentValue == null)
                 {
-                    context.getTree().setProperty(wrappedObject, this.path, value);
+                    context.getObjectFunction().setProperty(wrappedObject, this.path, value);
                 } else
                 {
                     BigDecimal current = new BigDecimal(currentValue.toString());
@@ -54,17 +54,17 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
                     {
                         // 取更小值，保持类型
                         Object result = calculateAndPreserveType(currentValue, value, (a, b) -> b);
-                        context.getTree().setProperty(wrappedObject, this.path, result);
+                        context.getObjectFunction().setProperty(wrappedObject, this.path, result);
                     }
                 }
                 break;
             }
             case MAX:
             {
-                Object currentValue = context.getTree().getProperty(wrappedObject, this.path).getObject();
+                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
                 if (currentValue == null)
                 {
-                    context.getTree().setProperty(wrappedObject, this.path, value);
+                    context.getObjectFunction().setProperty(wrappedObject, this.path, value);
                 } else
                 {
                     BigDecimal current = new BigDecimal(currentValue.toString());
@@ -73,7 +73,7 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
                     {
                         // 取更大值，保持类型
                         Object result = calculateAndPreserveType(currentValue, value, (a, b) -> b);
-                        context.getTree().setProperty(wrappedObject, this.path, result);
+                        context.getObjectFunction().setProperty(wrappedObject, this.path, result);
                     }
                 }
                 break;

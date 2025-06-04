@@ -20,4 +20,9 @@ public class Context
     {
         return object;
     }
+
+    public IObjectFunction getObjectFunction()
+    {
+        return tree.getObjectFunction();
+    }
 }

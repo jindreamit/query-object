@@ -3,7 +3,7 @@ package com.hero.x.query.object.tree;
 import com.hero.x.query.object.tree.node.UpdateNode;
 import com.hero.x.query.object.tree.node.WrappedObject;
 
-public class QueryTree implements IObjectFunction
+public class QueryTree
 {
     private final UpdateNode root;
     private final IObjectFunction objectFunction;
@@ -31,22 +31,8 @@ public class QueryTree implements IObjectFunction
         root.apply(context, wrappedObject);
     }
 
-    @Override
-    public void setProperty(WrappedObject o, String path, Object value)
+    public IObjectFunction getObjectFunction()
     {
-        objectFunction.setProperty(o, path, value);
+        return objectFunction;
     }
-
-    @Override
-    public void push(WrappedObject wrappedObject, Object value)
-    {
-        objectFunction.push(wrappedObject, value);
-    }
-
-    @Override
-    public WrappedObject getProperty(WrappedObject wrappedObject, String path)
-    {
-        return objectFunction.getProperty(wrappedObject, path);
-    }
-
 }

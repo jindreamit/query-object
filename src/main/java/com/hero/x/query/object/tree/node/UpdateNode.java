@@ -35,7 +35,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
             }
             case VisitArray:
             {
-                WrappedObject wrappedList = context.getTree().getProperty(wrappedObject, this.path);
+                WrappedObject wrappedList = context.getObjectFunction().getProperty(wrappedObject, this.path);
                 List<? super Object> list = (List<? super Object>) wrappedList.getObject();
                 List<ExprNode> primitiveExprNodeList = new ArrayList<>();
                 List<ExprNode> pullExprNodeList = new ArrayList<>();
@@ -80,12 +80,12 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
             }
             case AppendArray:
             {
-                WrappedObject wrappedList = context.getTree().getProperty(wrappedObject, this.path);
+                WrappedObject wrappedList = context.getObjectFunction().getProperty(wrappedObject, this.path);
                 if (evaluate(context, wrappedObject))
                 {
                     for (ExprNode exprNode : exprNodeList)
                     {
-                        context.getTree().push(wrappedList, exprNode.value);
+                        context.getObjectFunction().push(wrappedList, exprNode.value);
                     }
                 }
                 return;
