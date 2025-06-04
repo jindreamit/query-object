@@ -1,0 +1,26 @@
+{
+  "type": "UpdateObject",
+  "filter": {
+    "operator": "OR",
+    "value": [
+      {
+        "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.rewardList",
+        "operator": "EXIST",
+        "value": [
+          {
+            "operator": "GT",
+            "key": "status",
+            "value": 0
+          }
+        ]
+      }
+    ]
+  },
+  "update": [
+    {
+      "operator": "SET",
+      "key": "complete",
+      "value": true
+    }
+  ]
+}

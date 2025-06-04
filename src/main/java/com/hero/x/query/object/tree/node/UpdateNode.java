@@ -33,30 +33,23 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                 }
                 return;
             }
-            case UpdateArray:
+            case VisitArray:
             {
                 WrappedObject wrappedList = context.getTree().getProperty(wrappedObject, this.path);
                 List<? super Object> list = (List<? super Object>) wrappedList.getObject();
                 List<ExprNode> primitiveExprNodeList = new ArrayList<>();
-                List<ExprNode> notPrimitiveExprNodeList = new ArrayList<>();
+                List<ExprNode> pullExprNodeList = new ArrayList<>();
                 for (ExprNode exprNode : exprNodeList)
                 {
-                    if (exprNode.type().isPrimitive())
+                    if (exprNode.type().equals(ExprType.PULL))
                     {
-                        primitiveExprNodeList.add(exprNode);
+                        pullExprNodeList.add(exprNode);
                     } else
                     {
-                        notPrimitiveExprNodeList.add(exprNode);
+                        primitiveExprNodeList.add(exprNode);
                     }
                 }
-                for (ExprNode exprNode : notPrimitiveExprNodeList)
-                {
-                    if (exprNode.type() == ExprType.PUSH)
-                    {
-                        context.getTree().push(wrappedList, exprNode.value);
-                    }
-                }
-                if (!notPrimitiveExprNodeList.isEmpty())
+                if (!pullExprNodeList.isEmpty())
                 {
                     for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
                     {
@@ -64,14 +57,7 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                         WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
                         if (evaluate(context, wrappedElement))
                         {
-                            for (ExprNode exprNode : notPrimitiveExprNodeList)
-                            {
-                                if (exprNode.type() == ExprType.PULL)
-                                {
-                                    iterator.remove();
-                                    break;
-                                }
-                            }
+                            iterator.remove();
                         }
                     }
                 }
@@ -90,6 +76,19 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
                         }
                     }
                 }
+                return;
+            }
+            case AppendArray:
+            {
+                WrappedObject wrappedList = context.getTree().getProperty(wrappedObject, this.path);
+                if (evaluate(context, wrappedObject))
+                {
+                    for (ExprNode exprNode : exprNodeList)
+                    {
+                        context.getTree().push(wrappedList, exprNode.value);
+                    }
+                }
+                return;
             }
         }
     }

@@ -11,4 +11,5 @@ public enum FilterType
     AND,
     OR,
     ALL,
+    EXIST,
 }

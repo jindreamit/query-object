@@ -1,5 +1,5 @@
 {
-  "type": "UpdateArray",
+  "type": "VisitArray",
   "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.rewardList",
   "filter": {
     "operator": "OR",

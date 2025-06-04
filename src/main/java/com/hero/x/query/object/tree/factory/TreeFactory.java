@@ -34,10 +34,11 @@ public class TreeFactory
         switch (updateType)
         {
             case UpdateObject:
+            case AppendArray:
             {
                 return updateNode;
             }
-            case UpdateArray:
+            case VisitArray:
             {
 
                 JSONArray children = jsonObject.getJSONArray("children");
@@ -117,6 +118,8 @@ public class TreeFactory
             }
             case OR:
             case AND:
+            case ALL:
+            case EXIST:
             {
                 JSONArray array = jsonObject.getJSONArray("value");
                 for (int i = 0; i < array.size(); i++)
