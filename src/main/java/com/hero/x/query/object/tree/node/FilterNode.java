@@ -2,12 +2,33 @@ package com.hero.x.query.object.tree.node;
 
 import com.hero.x.query.object.tree.Context;
 import com.hero.x.query.object.tree.exception.TreeEvaluateException;
+import com.hero.x.query.object.tree.node.handler.IFilterHandler;
+import com.hero.x.query.object.tree.node.handler.filter.ALL_FilterHandler;
+import com.hero.x.query.object.tree.node.handler.filter.*;
 
-import java.math.BigDecimal;
-import java.util.List;
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.Map;
 
 public class FilterNode extends AbstractNode<FilterNode, FilterType>
 {
+    private static final Map<FilterType, IFilterHandler> HANDLER_MAP;
+
+    static
+    {
+        Map<FilterType, IFilterHandler> map = new EnumMap<>(FilterType.class);
+        map.put(FilterType.EQ, new EQ_FilterHandler());
+        map.put(FilterType.NE, new NE_FilterHandler());
+        map.put(FilterType.GT, new GT_FilterHandler());
+        map.put(FilterType.GTE, new GTE_FilterHandler());
+        map.put(FilterType.LT, new LT_FilterHandler());
+        map.put(FilterType.LTE, new LTE_FilterHandler());
+        map.put(FilterType.AND, new And_FilterHandler());
+        map.put(FilterType.OR, new OR_FilterHandler());
+        map.put(FilterType.ALL, new ALL_FilterHandler());
+        map.put(FilterType.EXIST, new EXIST_FilterHandler());
+        HANDLER_MAP = Collections.unmodifiableMap(map);
+    }
 
     public FilterNode(FilterType type, String path, Object value)
     {
@@ -20,128 +41,12 @@ public class FilterNode extends AbstractNode<FilterNode, FilterType>
         {
             throw new TreeEvaluateException(String.format("object is null,path:%s", path));
         }
-        switch (type)
+        IFilterHandler handler = HANDLER_MAP.get(type);
+        if (handler == null)
         {
-            case EQ ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                if (property == null)
-                {
-                    throw new TreeEvaluateException(String.format("property is null,path:%s", path));
-                }
-                return property.getObject().equals(this.value);
-            }
-            case NE ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                if (property == null)
-                {
-                    throw new TreeEvaluateException(String.format("property is null,path:%s", path));
-                }
-                return !property.getObject().equals(this.value);
-            }
-            case GT ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                if (property == null)
-                {
-                    throw new TreeEvaluateException(String.format("property is null,path:%s", path));
-                }
-                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
-                BigDecimal bd2 = new BigDecimal(this.value.toString());
-                return bd1.compareTo(bd2) > 0;
-            }
-            case GTE ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                if (property == null)
-                {
-                    throw new TreeEvaluateException(String.format("property is null,path:%s", path));
-                }
-                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
-                BigDecimal bd2 = new BigDecimal(this.value.toString());
-                return bd1.compareTo(bd2) >= 0;
-            }
-            case LT ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                if (property == null)
-                {
-                    throw new TreeEvaluateException(String.format("property is null,path:%s", path));
-                }
-                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
-                BigDecimal bd2 = new BigDecimal(this.value.toString());
-                return bd1.compareTo(bd2) < 0;
-            }
-            case LTE ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                if (property == null)
-                {
-                    throw new TreeEvaluateException(String.format("property is null,path:%s", path));
-                }
-                BigDecimal bd1 = new BigDecimal(property.getObject().toString());
-                BigDecimal bd2 = new BigDecimal(this.value.toString());
-                return bd1.compareTo(bd2) <= 0;
-            }
-            case AND ->
-            {
-                // AND 节点，假设 this.children 是 List<ExprNode>
-                for (FilterNode child : getChildren())
-                {
-                    if (!child.evaluate(context, object))
-                    {
-                        return false; // 任意子节点为 false，整个 AND 结果为 false
-                    }
-                }
-                return true; // 所有子节点都为 true
-            }
-            case OR ->
-            {
-                for (FilterNode child : getChildren())
-                {
-                    if (child.evaluate(context, object))
-                    {
-                        return true; // 任意子节点为 true，整个 OR 结果为 true
-                    }
-                }
-                return false; // 所有子节点都为 false
-            }
-            case ALL ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                List<? super Object> list = property.getAs();
-                for (Object o : list)
-                {
-                    WrappedObject element = WrappedObject.wrapListNode(property, property.getParameterizedType(), o);
-                    for (FilterNode child : getChildren())
-                    {
-                        if (!child.evaluate(context, element))
-                        {
-                            return false;
-                        }
-                    }
-                }
-                return true;
-            }
-            case EXIST ->
-            {
-                WrappedObject property = context.getObjectFunction().getProperty(object, this.path);
-                List<? super Object> list = property.getAs();
-                for (Object o : list)
-                {
-                    WrappedObject element = WrappedObject.wrapListNode(property, property.getParameterizedType(), o);
-                    for (FilterNode child : getChildren())
-                    {
-                        if (child.evaluate(context, element))
-                        {
-                            return true;
-                        }
-                    }
-                }
-                return false;
-            }
-            default -> throw new TreeEvaluateException("Unsupported node type: " + type);
+            throw new TreeEvaluateException("Unsupported node type: " + type);
         }
+        return handler.evaluate(this, context, object);
     }
+
 }

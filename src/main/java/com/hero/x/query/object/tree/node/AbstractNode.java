@@ -38,4 +38,14 @@ public abstract class AbstractNode<T,E> implements INode<T,E>
         }
         children.add(child);
     }
+
+    public String getPath()
+    {
+        return path;
+    }
+
+    public Object getValue()
+    {
+        return value;
+    }
 }

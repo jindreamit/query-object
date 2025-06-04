@@ -2,12 +2,28 @@ package com.hero.x.query.object.tree.node;
 
 import com.hero.x.query.object.tree.Context;
 import com.hero.x.query.object.tree.exception.TreeEvaluateException;
+import com.hero.x.query.object.tree.node.handler.IExprHandler;
+import com.hero.x.query.object.tree.node.handler.expr.*;
 
-import java.math.BigDecimal;
-import java.util.function.BiFunction;
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.Map;
 
 public class ExprNode extends AbstractNode<ExprNode, ExprType>
 {
+    private static final Map<ExprType, IExprHandler> HANDLER_MAP;
+
+    static
+    {
+        Map<ExprType, IExprHandler> map = new EnumMap<>(ExprType.class);
+        map.put(ExprType.MAX, new MAX_ExprHandler());
+        map.put(ExprType.MIN, new MIN_ExprHandler());
+        map.put(ExprType.MUL, new MUL_ExprHandler());
+        map.put(ExprType.INC, new INC_ExprHandler());
+        map.put(ExprType.SET, new SET_ExprHandler());
+        HANDLER_MAP = Collections.unmodifiableMap(map); // 如果你想要不可变
+    }
+
     public ExprNode(ExprType type, String path, Object value)
     {
         super(type, path, value);
@@ -19,110 +35,18 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
         {
             throw new TreeEvaluateException("object is null, path: " + path);
         }
-        switch (type)
+        IExprHandler handler = HANDLER_MAP.get(type);
+        if (handler == null)
         {
-            case SET:
-            {
-                context.getObjectFunction().setProperty(wrappedObject, this.path, this.value);
-                break;
-            }
-            case INC:
-            {
-                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
-                Object result = calculateAndPreserveType(currentValue, value, BigDecimal::add);
-                context.getObjectFunction().setProperty(wrappedObject, this.path, result);
-                break;
-            }
-            case MUL:
-            {
-                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
-                Object result = calculateAndPreserveType(currentValue, value, BigDecimal::multiply);
-                context.getObjectFunction().setProperty(wrappedObject, this.path, result);
-                break;
-            }
-            case MIN:
-            {
-                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
-                if (currentValue == null)
-                {
-                    context.getObjectFunction().setProperty(wrappedObject, this.path, value);
-                } else
-                {
-                    BigDecimal current = new BigDecimal(currentValue.toString());
-                    BigDecimal compare = new BigDecimal(value.toString());
-                    if (compare.compareTo(current) < 0)
-                    {
-                        // 取更小值，保持类型
-                        Object result = calculateAndPreserveType(currentValue, value, (a, b) -> b);
-                        context.getObjectFunction().setProperty(wrappedObject, this.path, result);
-                    }
-                }
-                break;
-            }
-            case MAX:
-            {
-                Object currentValue = context.getObjectFunction().getProperty(wrappedObject, this.path).getObject();
-                if (currentValue == null)
-                {
-                    context.getObjectFunction().setProperty(wrappedObject, this.path, value);
-                } else
-                {
-                    BigDecimal current = new BigDecimal(currentValue.toString());
-                    BigDecimal compare = new BigDecimal(value.toString());
-                    if (compare.compareTo(current) > 0)
-                    {
-                        // 取更大值，保持类型
-                        Object result = calculateAndPreserveType(currentValue, value, (a, b) -> b);
-                        context.getObjectFunction().setProperty(wrappedObject, this.path, result);
-                    }
-                }
-                break;
-            }
-            default:
-            {
-                throw new UnsupportedOperationException("Unsupported type: " + type);
-            }
+            throw new UnsupportedOperationException("Unsupported type: " + type);
         }
+        handler.apply(this, context, wrappedObject);
     }
 
     @Override
     public void addChild(ExprNode child)
     {
         throw new UnsupportedOperationException("ExprNode cannot have children");
-    }
-
-    private Object calculateAndPreserveType(Object currentValue, Object operand,
-                                            BiFunction<BigDecimal, BigDecimal, BigDecimal> operation)
-    {
-        if (currentValue == null)
-        {
-            currentValue = 0;
-        }
-        BigDecimal current = new BigDecimal(currentValue.toString());
-        BigDecimal op = new BigDecimal(operand.toString());
-        BigDecimal result = operation.apply(current, op);
-        if (currentValue instanceof Integer)
-        {
-            return result.intValue();
-        } else if (currentValue instanceof Long)
-        {
-            return result.longValue();
-        } else if (currentValue instanceof Double)
-        {
-            return result.doubleValue();
-        } else if (currentValue instanceof Float)
-        {
-            return result.floatValue();
-        } else if (currentValue instanceof Short)
-        {
-            return result.shortValue();
-        } else if (currentValue instanceof Byte)
-        {
-            return result.byteValue();
-        } else
-        {
-            return result;
-        }
     }
 
 }

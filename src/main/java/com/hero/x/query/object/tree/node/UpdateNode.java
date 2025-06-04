@@ -1,13 +1,28 @@
 package com.hero.x.query.object.tree.node;
 
 import com.hero.x.query.object.tree.Context;
+import com.hero.x.query.object.tree.exception.TreeEvaluateException;
+import com.hero.x.query.object.tree.node.handler.IUpdateHandler;
+import com.hero.x.query.object.tree.node.handler.update.*;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collections;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
 
 public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
 {
+    private static final Map<UpdateType, IUpdateHandler> HANDLER_MAP;
+
+    static
+    {
+        EnumMap<UpdateType, IUpdateHandler> map = new EnumMap<>(UpdateType.class);
+        map.put(UpdateType.UpdateObject, new UpdateObjectHandler());
+        map.put(UpdateType.VisitArray, new VisitArrayHandler());
+        map.put(UpdateType.AppendArray, new AppendArrayHandler());
+        HANDLER_MAP = Collections.unmodifiableMap(map);
+    }
+
     private final FilterNode filterNode;
     private final List<ExprNode> exprNodeList;
 
@@ -20,86 +35,21 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
 
     public void apply(Context context, WrappedObject wrappedObject)
     {
-        switch (type())
+        IUpdateHandler handler = HANDLER_MAP.get(type);
+        if (handler == null)
         {
-            case UpdateObject:
-            {
-                if (evaluate(context, wrappedObject))
-                {
-                    for (ExprNode exprNode : exprNodeList)
-                    {
-                        exprNode.apply(context, wrappedObject);
-                    }
-                }
-                return;
-            }
-            case VisitArray:
-            {
-                WrappedObject wrappedList = context.getObjectFunction().getProperty(wrappedObject, this.path);
-                List<? super Object> list = (List<? super Object>) wrappedList.getObject();
-                List<ExprNode> primitiveExprNodeList = new ArrayList<>();
-                List<ExprNode> pullExprNodeList = new ArrayList<>();
-                for (ExprNode exprNode : exprNodeList)
-                {
-                    if (exprNode.type().equals(ExprType.PULL))
-                    {
-                        pullExprNodeList.add(exprNode);
-                    } else
-                    {
-                        primitiveExprNodeList.add(exprNode);
-                    }
-                }
-                if (!pullExprNodeList.isEmpty())
-                {
-                    for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
-                    {
-                        Object o = iterator.next();
-                        WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
-                        if (evaluate(context, wrappedElement))
-                        {
-                            iterator.remove();
-                        }
-                    }
-                }
-                for (Object o : list)
-                {
-                    WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
-                    if (evaluate(context, wrappedElement))
-                    {
-                        for (ExprNode exprNode : primitiveExprNodeList)
-                        {
-                            exprNode.apply(context, wrappedElement);
-                        }
-                        for (UpdateNode updateNode : getChildren())
-                        {
-                            updateNode.apply(context, wrappedElement);
-                        }
-                    }
-                }
-                return;
-            }
-            case AppendArray:
-            {
-                WrappedObject wrappedList = context.getObjectFunction().getProperty(wrappedObject, this.path);
-                if (evaluate(context, wrappedObject))
-                {
-                    for (ExprNode exprNode : exprNodeList)
-                    {
-                        context.getObjectFunction().push(wrappedList, exprNode.value);
-                    }
-                }
-                return;
-            }
+            throw new TreeEvaluateException("Unsupported node type: " + type);
         }
+        handler.apply(this, context, wrappedObject);
     }
 
-    private boolean evaluate(Context context, WrappedObject wrappedObject)
+    public FilterNode getFilterNode()
     {
-        if (filterNode == null)
-        {
-            return true;
-        }
-        return filterNode.evaluate(context, wrappedObject);
+        return filterNode;
     }
 
+    public List<ExprNode> getExprNodeList()
+    {
+        return exprNodeList;
+    }
 }
