@@ -52,4 +52,14 @@ public class UpdateNode extends AbstractNode<UpdateNode, UpdateType>
     {
         return exprNodeList;
     }
+
+    @Override
+    public void addChild(UpdateNode child)
+    {
+        if (type() != UpdateType.VisitArray)
+        {
+            throw new TreeEvaluateException("Only VisitArray node can have children");
+        }
+        super.addChild(child);
+    }
 }

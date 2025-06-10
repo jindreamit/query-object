@@ -1,6 +1,7 @@
 package com.hero.x.query.object.tree.node;
 
 import com.hero.x.query.object.tree.Context;
+import com.hero.x.query.object.tree.exception.BuildTreeException;
 import com.hero.x.query.object.tree.exception.TreeEvaluateException;
 import com.hero.x.query.object.tree.node.handler.IExprHandler;
 import com.hero.x.query.object.tree.node.handler.expr.*;
@@ -46,7 +47,7 @@ public class ExprNode extends AbstractNode<ExprNode, ExprType>
     @Override
     public void addChild(ExprNode child)
     {
-        throw new UnsupportedOperationException("ExprNode cannot have children");
+        throw new BuildTreeException("ExprNode cannot have children");
     }
 
 }
