@@ -14,9 +14,10 @@ public class EXIST_FilterHandler implements IFilterHandler
     {
         WrappedObject property = context.getObjectFunction().getProperty(wrappedObject, filterNode.getPath());
         List<? super Object> list = property.getAs();
+        int i = 0;
         for (Object o : list)
         {
-            WrappedObject element = WrappedObject.wrapListNode(property, property.getParameterizedType(), o);
+            WrappedObject element = WrappedObject.wrapListNode(property, property.getParameterizedType(), o, String.valueOf(i));
             for (FilterNode child : filterNode.getChildren())
             {
                 if (child.evaluate(context, element))
@@ -24,6 +25,7 @@ public class EXIST_FilterHandler implements IFilterHandler
                     return true;
                 }
             }
+            i++;
         }
         return false;
     }

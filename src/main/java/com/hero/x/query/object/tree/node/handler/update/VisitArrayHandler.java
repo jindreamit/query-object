@@ -32,19 +32,22 @@ public class VisitArrayHandler implements IUpdateHandler
         }
         if (!pullExprNodeList.isEmpty())
         {
+            int i = 0;
             for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
             {
                 Object o = iterator.next();
-                WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
+                WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o, String.valueOf(i));
                 if (evaluate(updateNode.getFilterNode(), context, wrappedElement))
                 {
                     iterator.remove();
                 }
+                i++;
             }
         }
+        int i = 0;
         for (Object o : list)
         {
-            WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o);
+            WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o, String.valueOf(i));
             if (evaluate(updateNode.getFilterNode(), context, wrappedElement))
             {
                 for (ExprNode exprNode : primitiveExprNodeList)
@@ -56,6 +59,7 @@ public class VisitArrayHandler implements IUpdateHandler
                     childUpdateNode.apply(context, wrappedElement);
                 }
             }
+            i++;
         }
     }
 }

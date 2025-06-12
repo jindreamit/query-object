@@ -16,13 +16,14 @@ public class JsonObjectFunction implements IObjectFunction
         List<String> pathList = splitPath(path);
         for (int i = 0; i < pathList.size(); i++)
         {
+            String fieldName = pathList.get(i);
             if (i == pathList.size() - 1)
             {
                 JSONObject jsonObject = t.getAs();
-                return WrappedObject.wrapUnsafe(jsonObject.get(pathList.get(i)));
+                return WrappedObject.wrapNode(t, jsonObject.get(fieldName), fieldName);
             }
             JSONObject jsonObject = t.getAs();
-            t = WrappedObject.wrapUnsafe(jsonObject.getJSONObject(pathList.get(i)));
+            t = WrappedObject.wrapNode(t, jsonObject.getJSONObject(fieldName), fieldName);
         }
         return null;
     }
@@ -34,14 +35,15 @@ public class JsonObjectFunction implements IObjectFunction
         List<String> pathList = splitPath(path);
         for (int i = 0; i < pathList.size(); i++)
         {
+            String filedName = pathList.get(i);
             if (i == pathList.size() - 1)
             {
                 JSONObject jsonObject = t.getAs();
-                jsonObject.put(pathList.get(i), value);
+                jsonObject.put(filedName, value);
                 return;
             }
             JSONObject jsonObject = t.getAs();
-            t = WrappedObject.wrapUnsafe(jsonObject.getJSONObject(pathList.get(i)));
+            t = WrappedObject.wrapNode(o, jsonObject.getJSONObject(pathList.get(i)), filedName);
         }
     }
 
