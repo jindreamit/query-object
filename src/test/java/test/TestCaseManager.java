@@ -8,7 +8,7 @@ import java.nio.file.Path;
 public class TestCaseManager
 {
     @Test
-    public void main() throws Exception
+    public void launchTest() throws Exception
     {
         Files.list(Path.of(TestCaseManager.class.getResource("/testcase").toURI()))
             .forEach(s ->
