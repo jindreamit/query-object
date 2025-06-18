@@ -25,7 +25,7 @@ public class JsonObjectFunction implements IObjectFunction
             {
                 return fetchField(t, fieldName);
             }
-            t = fetchField(o, fieldName);
+            t = fetchField(t, fieldName);
         }
         return null;
     }
@@ -44,7 +44,7 @@ public class JsonObjectFunction implements IObjectFunction
                 setPropertyInternal(value, t, fieldName);
                 return;
             }
-            t = fetchField(o, fieldName);
+            t = fetchField(t, fieldName);
         }
     }
 

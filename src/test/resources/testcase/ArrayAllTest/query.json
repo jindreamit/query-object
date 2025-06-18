@@ -6,13 +6,11 @@
       {
         "key": "taskMap.SEVEN_DAYS_LOGIN:1:1.rewardList",
         "operator": "ALL",
-        "value": [
-          {
-            "operator": "GT",
-            "key": "status",
-            "value": 0
-          }
-        ]
+        "value": {
+          "operator": "GT",
+          "key": "status",
+          "value": 0
+        }
       }
     ]
   },

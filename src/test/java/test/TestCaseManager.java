@@ -14,6 +14,7 @@ public class TestCaseManager
             .forEach(s ->
             {
                 JsonTestCase testCase = new JsonTestCase(s);
+                System.out.printf("[RUN][BEFORE][%s]\n", s);
                 System.out.printf("[RUN][%s][PASS]:%s\n", s, testCase.run());
             });
     }

@@ -116,10 +116,15 @@ public class TreeFactory
             {
                 return filterNode;
             }
-            case OR:
-            case AND:
             case ALL:
             case EXIST:
+            {
+                JSONObject filterValueJson = jsonObject.getJSONObject("value");
+                filterNode.addChild(buildFilterNodeFromJson(filterValueJson));
+                return filterNode;
+            }
+            case OR:
+            case AND:
             {
                 JSONArray array = jsonObject.getJSONArray("value");
                 for (int i = 0; i < array.size(); i++)
