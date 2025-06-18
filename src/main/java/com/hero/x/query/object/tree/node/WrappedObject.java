@@ -28,6 +28,11 @@ public class WrappedObject
         return fieldNameAndObject.get(fieldName);
     }
 
+    public void removeField(String fieldName)
+    {
+        fieldNameAndObject.remove(fieldName);
+    }
+
     public void addField(String fieldName, WrappedObject wrappedObject)
     {
         fieldNameAndObject.put(fieldName, wrappedObject);

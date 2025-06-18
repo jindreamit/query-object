@@ -35,9 +35,6 @@ public class TreeFactory
         {
             case UpdateObject:
             case AppendArray:
-            {
-                return updateNode;
-            }
             case VisitArray:
             {
 

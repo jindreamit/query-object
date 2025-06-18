@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class TypeTest
     @Test
     public void test() throws Exception
     {
-        Field embedMapMap = TypedObject.class.getDeclaredField("embedMapMap");
+        Field embedMapMap = TypedObject.class.getDeclaredField("embedList");
         Type genericType = embedMapMap.getGenericType();
         System.out.println(genericType);
         ParameterizedType type = (ParameterizedType) genericType;
@@ -26,5 +27,6 @@ public class TypeTest
     {
         Map<String, Map<String, Integer>> embedMapMap = new HashMap<>();
         Map<String, List<Integer>> embedMapList = new HashMap<>();
+        List<List<Integer>> embedList = new ArrayList<>();
     }
 }

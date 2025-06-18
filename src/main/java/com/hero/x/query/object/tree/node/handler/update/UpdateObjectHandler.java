@@ -17,6 +17,10 @@ public class UpdateObjectHandler implements IUpdateHandler
             {
                 exprNode.apply(context, wrappedObject);
             }
+            for (UpdateNode child : updateNode.getChildren())
+            {
+                child.apply(context, wrappedObject);
+            }
         }
     }
 }

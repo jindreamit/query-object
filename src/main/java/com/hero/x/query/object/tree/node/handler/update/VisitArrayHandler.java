@@ -8,7 +8,6 @@ import com.hero.x.query.object.tree.node.WrappedObject;
 import com.hero.x.query.object.tree.node.handler.IUpdateHandler;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class VisitArrayHandler implements IUpdateHandler
@@ -32,34 +31,35 @@ public class VisitArrayHandler implements IUpdateHandler
         }
         if (!pullExprNodeList.isEmpty())
         {
-            int i = 0;
-            for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); )
+            for (int i = 0; i < list.size(); i++)
             {
-                Object o = iterator.next();
-                WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o, String.valueOf(i));
+                String fieldName = String.valueOf(i);
+                WrappedObject wrappedElement = context.getObjectFunction().getProperty(wrappedList, fieldName);
                 if (evaluate(updateNode.getFilterNode(), context, wrappedElement))
                 {
-                    iterator.remove();
+                    list.remove(wrappedElement.getObject());
+                    wrappedList.removeField(fieldName);
+                    i--;
                 }
-                i++;
             }
         }
-        int i = 0;
-        for (Object o : list)
+        for (int i = 0; i < list.size(); i++)
         {
-            WrappedObject wrappedElement = WrappedObject.wrapNode(wrappedObject, o, String.valueOf(i));
+            WrappedObject wrappedElement = context.getObjectFunction().getProperty(wrappedList, String.valueOf(i));
             if (evaluate(updateNode.getFilterNode(), context, wrappedElement))
             {
-                for (ExprNode exprNode : primitiveExprNodeList)
+                if (!primitiveExprNodeList.isEmpty())
                 {
-                    exprNode.apply(context, wrappedElement);
+                    for (ExprNode exprNode : primitiveExprNodeList)
+                    {
+                        exprNode.apply(context, wrappedElement);
+                    }
                 }
                 for (UpdateNode childUpdateNode : updateNode.getChildren())
                 {
                     childUpdateNode.apply(context, wrappedElement);
                 }
             }
-            i++;
         }
     }
 }
